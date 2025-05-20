@@ -3,189 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Resume</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- ↓↓↓ PURE CSS – edit colors in :root ↓↓↓ -->
+  <title>Min Thway Nge | Oracle DBA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --clr-bg:#0f172a;
-      --clr-accent:#14b8a6;
-      --clr-card:#1e293b;
-      --clr-text:#e2e8f0;
-      --clr-heading:#38bdf8;
-      --clr-pill:#334155;
+    :root {
+      --bg: #0f172a;
+      --accent: #14b8a6;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --heading: #38bdf8;
+      --pill: #334155;
     }
-
-    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-    body{
-      font-family:Poppins,Arial,sans-serif;
-      background:var(--clr-bg);color:var(--clr-text);line-height:1.6;
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    /* ---------- NAV ---------- */
-    nav{
-      position:fixed;top:0;left:0;width:100%;background:#020617cc;
-      backdrop-filter:blur(6px);z-index:99;border-bottom:1px solid #1e293b;
+    nav {
+      background: #020617cc;
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    nav ul{display:flex;justify-content:center;gap:2rem;padding:0.8rem 1rem;list-style:none;}
-    nav a{color:var(--clr-heading);text-decoration:none;font-weight:600;transition:.3s}
-    nav a:hover{color:var(--clr-accent)}
-
-    /* ---------- SECTIONS ---------- */
-    section{padding:4.5rem 1.2rem;max-width:1000px;margin:auto;}
-    h2{color:var(--clr-heading);margin-bottom:1.2rem;font-size:1.9rem;}
-
-    /* ---------- HERO ---------- */
-    #home{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:6rem;}
-    #home img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid var(--clr-accent);}
-    #home h1{font-size:2.3rem;margin-top:1rem;color:var(--clr-accent)}
-    #home p{max-width:650px;margin-top:0.8rem;}
-    .pill{
-      display:inline-block;margin:0.3rem;padding:0.35rem 0.8rem;border-radius:999px;
-      background:var(--clr-pill);font-size:0.85rem;
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
     }
-
-    /* ---------- CARDS ---------- */
-    .card{
-      background:var(--clr-card);padding:1.5rem;border-radius:1rem;margin-bottom:1.5rem;
-      box-shadow:0 6px 16px #00000040;
+    nav a {
+      color: var(--heading);
+      text-decoration: none;
+      font-weight: 600;
     }
-    .card h3{color:var(--clr-accent);margin-bottom:0.4rem;}
-
-    /* ---------- FLEX LISTS ---------- */
-    .flex-list{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.8rem;}
-    .flex-list .pill{background:var(--clr-accent);color:#083344;}
-
-    /* ---------- CONTACT ---------- */
-    .contact-link{color:var(--clr-accent);text-decoration:none;font-weight:600;}
-    .contact-link:hover{text-decoration:underline}
-
-    /* ---------- FOOTER ---------- */
-    footer{text-align:center;padding:2rem 0;color:#94a3b8;font-size:0.85rem;}
-
-    /* ---------- SCROLL ANIMATION ---------- */
-    .reveal{opacity:0;transform:translateY(40px);transition:all .6s ease;}
-    .reveal.active{opacity:1;transform:none;}
-
-    /* ---------- RESPONSIVE ---------- */
-    @media(max-width:600px){
-      nav ul{gap:1rem;font-size:0.9rem;}
-      #home h1{font-size:1.8rem;}
-      h2{font-size:1.6rem;}
+    nav a:hover { color: var(--accent); }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+    h2 {
+      color: var(--heading);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .hero img {
+      width: 150px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+    }
+    .hero h1 {
+      margin-top: 1rem;
+      color: var(--accent);
+    }
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .pill {
+      display: inline-block;
+      background: var(--pill);
+      padding: 0.3rem 0.8rem;
+      margin: 0.3rem;
+      border-radius: 999px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
     }
   </style>
-
-  <!-- Tiny scroll-reveal script -->
-  <script>
-    document.addEventListener('scroll',()=>{
-      document.querySelectorAll('.reveal').forEach(el=>{
-        if(el.getBoundingClientRect().top < window.innerHeight - 60){
-          el.classList.add('active');
-        }
-      });
-    });
-  </script>
 </head>
 <body>
-
-  <!-- ========= NAV ========= -->
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ========= HOME ========= -->
-  <section id="home">
-    <img src="photo.jpg" alt="Your Photo (replace file)" />
-    <h1>Your Name</h1>
-    <p>Oracle Database Administrator • Performance Tuning • High Availability</p>
-    <div class="flex-list" style="justify-content:center;margin-top:1rem;">
-      <span class="pill">Oracle 19c</span><span class="pill">RMAN</span><span class="pill">Data Guard</span>
-    </div>
+  <section class="hero">
+    <img src="photo.jpg" alt="Min Thway Nge">
+    <h1>Min Thway Nge</h1>
+    <p>Oracle Database Administrator</p>
   </section>
 
-  <!-- ========= ABOUT ========= -->
-  <section id="about" class="reveal">
+  <section id="about">
     <h2>About Me</h2>
     <div class="card">
-      <p>Certified Oracle DBA with 6+ years maintaining mission-critical 11g/12c/19c environments, specialising in backup &amp; recovery, RAC/ASM configuration and performance optimisation. Passionate about automating processes and ensuring data integrity.</p>
+      <p>Over 3 years of experience as an Oracle Database Administrator with hands-on experience in installation, configuration, upgrades, patches, performance tuning, backup & recovery, production support, and high availability.</p>
     </div>
   </section>
 
-  <!-- ========= EDUCATION ========= -->
-  <section id="education" class="reveal">
+  <section id="education">
     <h2>Education</h2>
     <div class="card">
-      <h3>B.Sc. Computer Science</h3>
-      <p>University of Technology – 2018</p>
-      <p class="pill">First Class Honours</p>
-    </div>
-    <div class="card">
-      <h3>Certifications</h3>
-      <ul style="margin-left:1.2rem;">
-        <li>Oracle Certified Professional (19c)</li>
-        <li>Oracle Cloud Infrastructure Foundations 2023</li>
-        <li>ITIL v4 Foundation</li>
-      </ul>
+      <p><strong>Technological University (Hmawbi)</strong></p>
+      <p>Bachelor of Technology (IT) – Dec 2018 - Feb 2020</p>
+      <p>Bachelor of Engineering (IT) – Dec 2013 - Sept 2018</p>
     </div>
   </section>
 
-  <!-- ========= EXPERIENCE ========= -->
-  <section id="experience" class="reveal">
+  <section id="experience">
     <h2>Work Experience</h2>
-
     <div class="card">
-      <h3>Senior Oracle DBA – XYZ Bank</h3>
-      <p><em>2022 – Present</em></p>
-      <ul style="margin-left:1.2rem;">
-        <li>Administer 60+ production databases (12c/19c) with Data Guard &amp; RAC.</li>
-        <li>Implemented backup automation reducing recovery time by 45%.</li>
-        <li>Led migration to Oracle 19c with <1 hr downtime.</li>
+      <p><strong>PayTech Myanmar</strong> – Aug 2023 – Present</p>
+      <ul>
+        <li>Supporting digital banking software as DBA</li>
+        <li>Implemented Oracle RAC, PostgreSQL Clustering</li>
+        <li>Maintained MS SQL clusters and DR plans</li>
       </ul>
     </div>
-
     <div class="card">
-      <h3>Oracle DBA – ABC Solutions</h3>
-      <p><em>2018 – 2022</em></p>
-      <ul style="margin-left:1.2rem;">
-        <li>Managed performance tuning using AWR/ADDM, cutting CPU usage 30%.</li>
-        <li>Developed shell scripts for proactive monitoring and alerting.</li>
+      <p><strong>ACE Data Systems</strong> – Oct 2022 – Aug 2023</p>
+      <ul>
+        <li>Maintained Oracle EBS environments</li>
+        <li>Automated RMAN backup scripts via cron</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p><strong>Myanmar Tourism Bank</strong> – Oct 2020 – Oct 2022</p>
+      <ul>
+        <li>Managed database users, tablespaces, performance</li>
+        <li>Administered WebLogic Middleware & Oracle BI</li>
       </ul>
     </div>
   </section>
 
-  <!-- ========= SKILLS ========= -->
-  <section id="skills" class="reveal">
-    <h2>Technical Skills</h2>
-    <div class="flex-list">
-      <span class="pill">Oracle 11g/12c/19c</span><span class="pill">ASM &amp; RAC</span>
-      <span class="pill">RMAN</span><span class="pill">Data Pump</span>
-      <span class="pill">PL/SQL</span><span class="pill">Shell Scripting</span>
-      <span class="pill">Linux (RHEL)</span><span class="pill">OEM 13c</span>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <span class="pill">Oracle, PostgreSQL, MySQL, MS SQL</span>
+      <span class="pill">RAC, Data Guard, RMAN</span>
+      <span class="pill">WebLogic, JBoss</span>
+      <span class="pill">Linux (Oracle, Redhat, Solaris)</span>
+      <span class="pill">Shell Scripting, PHP</span>
     </div>
   </section>
 
-  <!-- ========= CONTACT ========= -->
-  <section id="contact" class="reveal">
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="card">
+      <ul>
+        <li>Oracle Database Administration – Infowave Training Center</li>
+        <li>Oracle Autonomous Database Cloud 2021 Certified Specialist</li>
+        <li>Oracle Cloud Database Services 2021 Certified Specialist</li>
+        <li>Oracle Cloud Database Migration and Integration 2021 Certified Specialist</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <div class="card" style="text-align:center">
-      <p>Email: <a class="contact-link" href="mailto:you@example.com">you@example.com</a></p>
-      <p>LinkedIn: <a class="contact-link" href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-      <p><a class="contact-link" href="resume.pdf" target="_blank">Download PDF Resume</a></p>
+    <div class="card">
+      <p>Phone: +959 264 509 997</p>
+      <p>Email: <a href="mailto:minthwaynge.job@gmail.com">minthwaynge.job@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/min-thway-nge-3719901b2/" target="_blank">View Profile</a></p>
+      <p>Website: <a href="https://minthway-nge.000webhostapp.com" target="_blank">minthway-nge.000webhostapp.com</a></p>
     </div>
   </section>
 
   <footer>
-    © 2025 Your Name — Built with pure HTML & CSS
+    &copy; 2025 Min Thway Nge | Oracle DBA Resume Website
   </footer>
-
 </body>
 </html>
