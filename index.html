@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Min Thway Nge, an experienced Oracle Database Administrator based in Myanmar." />
   <title>Min Thway Nge | Oracle DBA</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -95,6 +96,10 @@
       padding: 1.5rem;
       border-radius: 12px;
       margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     .pill {
       display: inline-block;
@@ -107,6 +112,9 @@
       text-align: center;
       padding: 2rem;
       color: #94a3b8;
+    }
+    a {
+      color: var(--accent);
     }
     @media (max-width: 768px) {
       body {
@@ -145,9 +153,10 @@
 
   <main>
     <section class="hero" id="home">
-      <img src="photo.jpg" alt="Min Thway Nge">
+      <img src="photo.jpg" alt="Professional headshot of Min Thway Nge, Oracle DBA">
       <h1>Min Thway Nge</h1>
       <p>Oracle Database Administrator</p>
+      <a href="Min_Thway_Nge_Resume.pdf" download class="pill">Download PDF</a>
     </section>
 
     <section id="about">
@@ -197,21 +206,11 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="card">
-        <span class="pill">Oracle</span>
-        <span class="pill">PostgreSQL</span>
-        <span class="pill">MySQL</span>
-        <span class="pill">MS SQL</span>
-        <span class="pill">RAC</span>
-        <span class="pill">Active Data Guard</span>
-        <span class="pill">RMAN</span>
-        <span class="pill">Data Pump</span>
-        <span class="pill">WebLogic</span>
-        <span class="pill">JBoss</span>
-        <span class="pill">Linux (Oracle, Redhat, Solaris)</span>
-        <span class="pill">Shell Scripting</span>
-        <span class="pill">PHP</span>
-        <span class="pill">High Availability</span>
-        <span class="pill">Disaster Recovery</span>
+        <p><strong>Databases:</strong> Oracle, PostgreSQL, MySQL, MS SQL</p>
+        <p><strong>High Availability:</strong> RAC, Active Data Guard, Clustering</p>
+        <p><strong>Tools:</strong> RMAN, Data Pump, WebLogic, JBoss</p>
+        <p><strong>OS/Scripting:</strong> Linux (Oracle, Redhat, Solaris), Shell Scripting</p>
+        <p><strong>Others:</strong> PHP, High Availability, Disaster Recovery</p>
       </div>
     </section>
 
@@ -230,7 +229,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p>📞 Phone: +959 264 509 997</p>
+        <p>📞 Phone: <a href="tel:+959264509997">+959 264 509 997</a></p>
         <p>📧 Email: <a href="mailto:minthwaynge.job@gmail.com">minthwaynge.job@gmail.com</a></p>
         <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/min-thway-nge-3719901b2/" target="_blank">View Profile</a></p>
         <p>🌐 Website: <a href="https://minthway-nge.000webhostapp.com" target="_blank">minthway-nge.000webhostapp.com</a></p>
@@ -240,7 +239,6 @@
     <footer>
       &copy; 2025 Min Thway Nge | Oracle DBA Resume Website
     </footer>
-
   </main>
 </body>
 </html>
