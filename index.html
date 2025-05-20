@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Min Thway Nge | Oracle DBA</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     :root {
       --bg: #0f172a;
@@ -25,47 +26,52 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      display: flex;
     }
-    header {
+    aside.sidebar {
+      width: 260px;
+      height: 100vh;
       background: var(--card);
-      padding: 1rem 2rem;
-      position: sticky;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      left: 0;
       top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: flex-end;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-    header nav ul {
-      display: flex;
-      gap: 1.5rem;
+    .sidebar nav ul {
       list-style: none;
+      padding: 0;
     }
-    header nav a {
-      color: var(--heading);
+    .sidebar nav li {
+      margin-bottom: 1.2rem;
+    }
+    .sidebar nav a {
+      color: var(--text);
       text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 0.8rem;
-      transition: background 0.3s, color 0.3s;
-      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      transition: 0.3s;
     }
-    header nav a:hover {
-      background-color: var(--accent);
-      color: #fff;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
-    h2 {
+    .sidebar nav a i {
+      margin-right: 0.8rem;
       color: var(--heading);
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      width: 20px;
+      text-align: center;
+    }
+    .sidebar nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      margin-left: 260px;
+      width: calc(100% - 260px);
+      padding: 2rem;
     }
     .hero {
       text-align: center;
-      padding-top: 4rem;
+      margin-top: 2rem;
     }
     .hero img {
       width: 150px;
@@ -78,6 +84,11 @@
     .hero h1 {
       margin-top: 1rem;
       color: var(--accent);
+    }
+    h2 {
+      color: var(--heading);
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
     }
     .card {
       background: var(--card);
@@ -98,33 +109,49 @@
       color: #94a3b8;
     }
     @media (max-width: 768px) {
-      header nav ul {
+      body {
+        flex-direction: column;
+      }
+      aside.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+      }
+      main {
+        margin: 0;
+        width: 100%;
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <aside class="sidebar">
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
 
-  <section class="hero">
-    <img src="photo.jpg" alt="Min Thway Nge">
-    <h1>Min Thway Nge</h1>
-    <p>Oracle Database Administrator</p>
-  </section>
+  <main>
+    <section class="hero" id="home">
+      <img src="photo.jpg" alt="Min Thway Nge">
+      <h1>Min Thway Nge</h1>
+      <p>Oracle Database Administrator</p>
+    </section>
 
-  <!-- Content sections (about, education, experience, etc.) remain unchanged -->
+    <!-- Remaining sections go here -->
+
+  </main>
 </body>
 </html>
