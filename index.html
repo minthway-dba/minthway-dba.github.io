@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Resume of Min Thway Nge, an experienced Oracle Database Administrator based in Myanmar." />
-  <title>Min Thway Nge – Oracle Database Administrator</title>
+  <meta name="description" content="Min Thway Nge – Oracle Database Administrator Resume" />
+  <title>Min Thway Nge – Oracle DBA</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
   <style>
     :root {
       --bg: #0f172a;
@@ -14,160 +13,105 @@
       --card: #1e293b;
       --text: #f1f5f9;
       --heading: #38bdf8;
-      --pill: #334155;
     }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      display: flex;
-      flex-direction: row;
     }
-    aside.sidebar {
-      width: 260px;
-      height: 100vh;
-      background: var(--card);
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-    .sidebar nav ul {
-      list-style: none;
-    }
-    .sidebar nav li {
-      margin-bottom: 1.2rem;
-    }
-    .sidebar nav a {
-      color: var(--text);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .sidebar nav a i {
-      margin-right: 0.8rem;
-      color: var(--heading);
-      width: 20px;
-      text-align: center;
-    }
-    .sidebar nav a:hover {
-      color: var(--accent);
-    }
-    main {
-      margin-left: 260px;
-      width: calc(100% - 260px);
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 2rem;
     }
+
     .hero {
       text-align: center;
-      margin-top: 2rem;
+      padding: 4rem 1rem 2rem;
     }
-    .hero img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--accent);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    }
+
     .hero h1 {
-      margin-top: 1rem;
+      font-size: 3rem;
       color: var(--accent);
     }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
     h2 {
       color: var(--heading);
       font-size: 1.8rem;
       margin: 2rem 0 1rem;
     }
+
     .card {
       background: var(--card);
       padding: 1.5rem;
       border-radius: 12px;
       margin-bottom: 2rem;
-      transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: scale(1.02);
+
+    .card ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
     }
-    .pill {
-      display: inline-block;
-      background: var(--pill);
-      padding: 0.3rem 0.8rem;
-      margin: 0.3rem;
-      border-radius: 999px;
-      text-decoration: none;
-      color: var(--text);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-    }
+
     a {
       color: var(--accent);
+      text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      margin-top: 4rem;
+      padding: 2rem 0;
+    }
+
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
+      .hero h1 {
+        font-size: 2.2rem;
       }
-      aside.sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      main {
-        margin: 0;
-        width: 100%;
-        padding: 1.5rem;
+      .hero p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <nav>
-      <ul>
-        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-        <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
-  </aside>
 
-  <main>
+  <div class="container">
+    <!-- Introduction -->
     <section class="hero" id="home">
-      <img src="photo.jpg" alt="Min Thway Nge professional headshot">
       <h1>Min Thway Nge</h1>
       <p>Oracle Database Administrator</p>
-      <a href="Min_Thway_Nge_Resume.pdf" download class="pill">Download PDF</a>
     </section>
 
+    <!-- About -->
     <section id="about">
       <h2>About Me</h2>
       <div class="card">
-        <p>Over 3 years of experience as an Oracle Database Administrator with hands-on expertise in installation, configuration, upgrades, patching, performance tuning, backup & recovery, production support, disaster recovery, and high availability solutions.</p>
+        <p>Over 3 years of experience as an Oracle Database Administrator with hands-on expertise in installation, configuration, upgrades, patching, performance tuning, backup & recovery, production support, disaster recovery, and high availability.</p>
       </div>
     </section>
 
+    <!-- Education -->
     <section id="education">
       <h2>Education</h2>
       <div class="card">
@@ -179,8 +123,10 @@
       </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
+
       <div class="card">
         <p><strong>PayTech Myanmar</strong> – Aug 2023 – Present</p>
         <ul>
@@ -189,6 +135,7 @@
           <li>Developed HA and DR plans, licensing support, and system monitoring.</li>
         </ul>
       </div>
+
       <div class="card">
         <p><strong>ACE Data Systems</strong> – Oct 2022 – Aug 2023</p>
         <ul>
@@ -196,15 +143,17 @@
           <li>Automated RMAN backups, monitored DB/DR status, and performed cloning.</li>
         </ul>
       </div>
+
       <div class="card">
         <p><strong>Myanmar Tourism Bank</strong> – Oct 2020 – Oct 2022</p>
         <ul>
-          <li>Managed users, tablespaces, performance tuning, backup/recovery, and middleware configuration.</li>
-          <li>Developed IBD dashboard and supported Oracle BI and WebLogic administration.</li>
+          <li>Handled user, tablespace, performance tuning, backup/recovery, and middleware config.</li>
+          <li>Developed IBD dashboard and supported Oracle BI and WebLogic admin.</li>
         </ul>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="card">
@@ -212,10 +161,11 @@
         <p><strong>High Availability:</strong> RAC, Active Data Guard, Clustering</p>
         <p><strong>Tools:</strong> RMAN, Data Pump, WebLogic, JBoss</p>
         <p><strong>OS & Scripting:</strong> Linux (Oracle, RedHat, Solaris), Shell Scripting</p>
-        <p><strong>Other Areas:</strong> PHP, High Availability, Disaster Recovery</p>
+        <p><strong>Other:</strong> PHP, High Availability, Disaster Recovery</p>
       </div>
     </section>
 
+    <!-- Certificates -->
     <section id="certificates">
       <h2>Certificates</h2>
       <div class="card">
@@ -228,6 +178,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
@@ -238,9 +189,11 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       &copy; 2025 Min Thway Nge | Oracle DBA Resume Website
     </footer>
-  </main>
+  </div>
+
 </body>
 </html>
